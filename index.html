@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Halloween Tricks & Treats</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Ghost Cursor -->
+    <div class="ghost-cursor" id="ghostCursor"></div>
+
+    <header>
+        <h1>Halloween Tricks & Treats</h1>
+        <p>Discover spooky surprises and delicious delights!</p>
+    </header>
+
+    <section class="section" id="tricks">
+        <h2>Tricks</h2>
+        <div class="card" onmouseover="showBat()" onclick="playSound('trick')">
+            <h3>Spooky Pranks</h3>
+            <p>Set up a spooky scare with ghostly noises or hidden skeletons!</p>
+        </div>
+        <div class="card" onmouseover="showBat()" onclick="playSound('trick')">
+            <h3>Trick or Treat Hunt</h3>
+            <p>Create a scavenger hunt with creepy clues and eerie locations.</p>
+        </div>
+    </section>
+
+    <section class="section" id="treats">
+        <h2>Treats</h2>
+        <div class="card" onclick="candyShower()">
+            <h3>Pumpkin Spice Delights</h3>
+            <p>Indulge in pumpkin-themed snacks and warm cider.</p>
+        </div>
+        <div class="card" onclick="candyShower()">
+            <h3>Candy Galore</h3>
+            <p>Stock up on Halloween classics like candy corn and chocolate bars!</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Halloween Tricks & Treats | Scary Fun for Everyone!</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

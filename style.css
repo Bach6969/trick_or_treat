@@ -1,0 +1,158 @@
+/* Reset and Fonts */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Creepster', cursive;
+}
+
+body {
+    background: #222;
+    color: #f3e9dc;
+    text-align: center;
+    overflow-x: hidden;
+    cursor: none; /* Hide default cursor */
+}
+
+/* Header */
+header {
+    padding: 1em;
+    background: linear-gradient(145deg, #fa709a 0%, #fee140 100%);
+    color: #222;
+    position: relative;
+}
+
+header h1 {
+    font-size: 3em;
+    text-shadow: 2px 2px #ff5733;
+    animation: spooky-glow 2s ease-in-out infinite;
+}
+
+/* Tricks and Treats Sections */
+.section {
+    padding: 2em;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    overflow: hidden;
+}
+
+.section h2 {
+    font-size: 2.5em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+    color: #ffdd00;
+}
+
+.card {
+    background: #333;
+    border: 2px solid #ff6f61;
+    width: 45%;
+    padding: 2em;
+    margin: 1em;
+    border-radius: 15px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card h3 {
+    color: #ffdd00;
+    font-size: 1.8em;
+}
+
+.card p {
+    color: #ddd;
+    font-size: 1.1em;
+}
+
+/* Footer */
+footer {
+    padding: 1em;
+    background: #444;
+    color: #ffdd00;
+}
+
+footer p {
+    font-size: 0.9em;
+}
+
+/* CSS Ghost Cursor */
+.ghost-cursor {
+    position: absolute;
+    width: 40px;
+    height: 50px;
+    border-radius: 50% 50% 0 0;
+    background-color: #f3e9dc;
+    transform-origin: center top;
+    transition: transform 0.1s ease;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.ghost-cursor::before, .ghost-cursor::after {
+    content: '';
+    position: absolute;
+    background: #222;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    top: 12px;
+}
+
+.ghost-cursor::before {
+    left: 10px; /* Left eye */
+}
+
+.ghost-cursor::after {
+    right: 10px; /* Right eye */
+}
+
+/* Ghost mouth */
+.ghost-cursor::after {
+    width: 12px;
+    height: 3px;
+    bottom: 8px;
+    background: #222;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+}
+
+/* Floating Candy */
+.candy {
+    position: fixed;
+    top: -50px;
+    font-size: 2em;
+    opacity: 0.9;
+    animation: fall 3s linear;
+}
+
+/* Bats */
+.bat {
+    position: absolute;
+    font-size: 3em;
+    animation: fly 1.5s ease-out;
+    opacity: 0;
+}
+
+/* Animations */
+@keyframes spooky-glow {
+    0%, 100% { text-shadow: 0px 0px 5px #ff4d4d; }
+    50% { text-shadow: 0px 0px 20px #ff4d4d; }
+}
+
+@keyframes fall {
+    0% { transform: translateY(-10px); opacity: 1; }
+    100% { transform: translateY(100vh); opacity: 0; }
+}
+
+@keyframes fly {
+    0% { opacity: 1; transform: translateX(-100px) translateY(0); }
+    100% { opacity: 0; transform: translateX(100px) translateY(-50px); }
+}
